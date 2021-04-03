@@ -14,6 +14,7 @@ import useNewsAPI from "./useNewsApi";
 import "./editor.scss";
 
 export default function Edit({ attributes, setAttributes }) {
+	console.log(attributes);
 	const { topic, perPage, page } = !!attributes ? attributes : {};
 	const { isLoading, articles, error } = useNewsAPI(topic, perPage, page);
 
@@ -37,14 +38,14 @@ export default function Edit({ attributes, setAttributes }) {
 								<NumberControl
 									label={__("Number of topics", "rn-news-block")}
 									value={perPage}
-									onChange={(val) => setAttributes({ perPage: val })}
+									onChange={(val) => setAttributes({ perPage: parseInt(val) })}
 								/>
 							</FlexBlock>
 							<FlexBlock>
 								<NumberControl
 									label={__("Page Number", "rn-news-block")}
 									value={page}
-									onChange={(val) => setAttributes({ page: val })}
+									onChange={(val) => setAttributes({ page: parseInt(val) })}
 								/>
 							</FlexBlock>
 						</Flex>

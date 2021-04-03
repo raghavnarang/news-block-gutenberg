@@ -990,6 +990,7 @@ __webpack_require__.r(__webpack_exports__);
 function Edit(_ref) {
   var attributes = _ref.attributes,
       setAttributes = _ref.setAttributes;
+  console.log(attributes);
 
   var _ref2 = !!attributes ? attributes : {},
       topic = _ref2.topic,
@@ -1020,7 +1021,7 @@ function Edit(_ref) {
     value: perPage,
     onChange: function onChange(val) {
       return setAttributes({
-        perPage: val
+        perPage: parseInt(val)
       });
     }
   })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__["FlexBlock"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__["__experimentalNumberControl"], {
@@ -1028,7 +1029,7 @@ function Edit(_ref) {
     value: page,
     onChange: function onChange(val) {
       return setAttributes({
-        page: val
+        page: parseInt(val)
       });
     }
   })))))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
@@ -1079,20 +1080,6 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])("rn/
   edit: _edit__WEBPACK_IMPORTED_MODULE_1__["default"],
   save: function save() {
     return null;
-  },
-  attributes: {
-    topic: {
-      type: "string",
-      default: ""
-    },
-    perPage: {
-      type: "number",
-      default: 10
-    },
-    page: {
-      type: "number",
-      default: 1
-    }
   }
 });
 
