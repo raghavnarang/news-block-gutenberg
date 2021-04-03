@@ -1,0 +1,13 @@
+{
+	"apiVersion": 2,
+	"name": "rn/news-block",
+	"title": "RN News Block",
+	"category": "widgets",
+	"icon": "smiley",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "rn-news-block",
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css"
+}
