@@ -3,7 +3,6 @@ import {
 	TextControl,
 	Flex,
 	FlexBlock,
-	FlexItem,
 	Spinner,
 	__experimentalNumberControl as NumberControl,
 } from "@wordpress/components";
@@ -14,7 +13,6 @@ import useNewsAPI from "./useNewsApi";
 import "./editor.scss";
 
 export default function Edit({ attributes, setAttributes }) {
-	console.log(attributes);
 	const { topic, perPage, page } = !!attributes ? attributes : {};
 	const { isLoading, articles, error } = useNewsAPI(topic, perPage, page);
 
